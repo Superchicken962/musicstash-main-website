@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MusicStash</title>
     <link rel="stylesheet" href="./main.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/6.3.2/themes/light.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -37,7 +38,7 @@
             <div class="appDesc" data-app="client">
                 <p class="main">
                     The Desktop Application (Client) is the original MusicStash application. With the client,
-                    you are given a <span class="hint" data-hint="...">Master Stash</span> where all your imported music will reside. You can create your own <span class="hint" data-hint="Playlists are called Stashes">Stashes</span>
+                    you are given a <span class="hint" data-hint="The main Stash where all songs will be stored">Master Stash</span> where all your imported music will reside. You can create your own <span class="hint" data-hint="Playlists are called Stashes">Stashes</span>
                     and add any song that you have imported into your Master Stash.
                 </p>
 
@@ -52,8 +53,7 @@
             </div>
             <div class="appDesc hidden" data-app="web_player">
                 <p class="main">
-                    The Web Player is an external website that allows you to play your music on other devices. It has been designed as a non-standalone mobile version of the client
-                    - requires a server connection to access data.
+                    The Web Player is an external website that allows you to play your music on other devices. It has been designed as a <span class="hint" data-hint="Requires a server connection to access data">non-standalone</span> mobile version of the client.
                     Provided with a server address, the web player will show all user-created Stashes
                     (Not the Master Stash) and allow for a similiar experience to the desktop app.
                 </p>
@@ -70,6 +70,8 @@
         </div>
     </div>
 </body>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
 <script src="./utils.js"></script>
 <script src="./main.js"></script>
 </html>

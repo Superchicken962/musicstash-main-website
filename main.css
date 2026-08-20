@@ -132,3 +132,8 @@ h1 .hintText {
     margin-left: 10px;
     font-weight: lighter;
 }
+
+.hint {
+    cursor: help;
+    text-decoration: underline dotted;
+}

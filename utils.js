@@ -24,3 +24,20 @@ function addClassToAll(selector, className) {
 
     document.querySelectorAll(selector).forEach(el => el.classList.add(className));
 }
+
+/**
+ * Find and set hints - elements with .hint class and data-hint attribute.
+ */
+function findAndConvertHints() {
+    const elements = document.querySelectorAll(".hint[data-hint]");
+    for (const el of elements) {
+        const hint = el.getAttribute("data-hint");
+
+        tippy(el, {
+            content: hint,
+            placement: "top",
+            theme: "light"
+        });
+    }
+}
+findAndConvertHints();
