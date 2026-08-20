@@ -1,16 +1,29 @@
 function initialiseApps() {
     const apps = document.querySelectorAll(".applications .app");
-    for (const app of apps) {
-        app.onclick = () => {
-            removeClassFromAll(apps, "selected");
+    const preselected = localStorage.getItem("selectedApplication");
 
-            app.classList.add("selected");
-            // Show the associated description of the app.
-            setAppDescription(app.getAttribute("data-for-app"));
+    for (const app of apps) {
+        const appName = app.getAttribute("data-for-app");
+        if (appName === preselected) {
+            removeClassFromAll(apps, "selected");
+            selectApp(appName);
+        }
+
+        app.onclick = () => {
+            selectApp(appName);
         }
     }
 }
 initialiseApps();
+
+function selectApp(appName) {
+    removeClassFromAll(".applications .app", "selected");
+
+    document.querySelector(`.applications .app[data-for-app='${appName}']`).classList.add("selected");
+    // Show the associated description of the app.
+    setAppDescription(appName);
+    localStorage.setItem("selectedApplication", appName);
+}
 
 function setAppDescription(app) {
     const desc = document.querySelector(`.appDesc[data-app='${app}']`);
