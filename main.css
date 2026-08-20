@@ -48,6 +48,15 @@ body {
     text-align: center;
 }
 
+.block.top {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.block.bottom {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
 .applications {
     display: block;
     margin: auto;
@@ -136,4 +145,10 @@ h1 .hintText {
 .hint {
     cursor: help;
     text-decoration: underline dotted;
+}
+
+@media screen and (max-width: 450px) {
+    .block {
+        width: 90%;
+    }
 }
