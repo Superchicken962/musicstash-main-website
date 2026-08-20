@@ -84,3 +84,51 @@ p.main {
     font-weight: lighter;
     font-size: 20px;
 }
+
+.hintText {
+    color: grey;
+}
+h1 .hintText {
+    font-size: 24px;
+}
+
+.button {
+    display: block;
+    width: fit-content;
+    font-weight: lighter;
+    padding: 6px 12px;
+    border-radius: 5px;
+    background-color: var(--solid_button);
+    color: white;
+    text-decoration: none;
+}
+.button.center {
+    margin: auto;
+}
+.button:hover {
+    background-color: var(--solid_button_hover);
+    cursor: pointer;
+}
+
+.button.big {
+    padding: 6px 24px;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.download::after {
+    font-family: FontAwesome;
+    content: "\f019";
+    text-align: center;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: lighter;
+}
+.external::after {
+    font-family: FontAwesome;
+    content: "\f08e";
+    text-align: center;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: lighter;
+}
