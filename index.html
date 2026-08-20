@@ -5,20 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MusicStash</title>
     <link rel="stylesheet" href="./main.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="block text-center">
         <h1>MusicStash</h1>
     </div>
 
+    <div class="block">
+        <p class="main">
+            MusicStash is a music player that is designed to be simple and easy to use. It allows for file importing, or direct download from YouTube.
+        </p>
+    </div>
+
     <div class="block text-center">
         <div class="applications">
             <div class="app selected" data-for-app="client">
                 <h2>Client / Server</h2>
+                <i class="icon fa fa-computer"></i>
             </div>
 
             <div class="app" data-for-app="web_player">
                 <h2>Web Player</h2>
+                <i class="icon fa fa-mobile-phone"></i>
             </div>
         </div>
     </div>
@@ -26,10 +35,29 @@
     <div class="block">
         <div class="applicationDescription">
             <div class="appDesc" data-app="client">
-                <p>Client Description</p>
+                <p class="main">
+                    The Desktop Application (Client) is the original MusicStash application. With the client,
+                    you are given a <span class="hint" data-hint="...">Master Stash</span> where all your imported music will reside. You can create your own <span class="hint" data-hint="Playlists are called Stashes">Stashes</span>
+                    and add any song that you have imported into your Master Stash.
+                </p>
+
+                <p class="main">
+                    Importing music is simple. If you have your own mp3 files, you can do a local import which will copy the file into MusicStash.
+                    Otherwise, you can download songs directly from YouTube into your Master Stash.
+                </p>
             </div>
             <div class="appDesc hidden" data-app="web_player">
-                <p>Web Player Description</p>
+                <p class="main">
+                    The Web Player is an external website that allows you to play your music on other devices. It has been designed as a non-standalone mobile version of the client
+                    - requires a server connection to access data.
+                    Provided with a server address, the web player will show all user-created Stashes
+                    (Not the Master Stash) and allow for a similiar experience to the desktop app.
+                </p>
+
+                <p class="main">
+                    The desktop application comes with a server manager, which will allow you to host your MusicStash and connect via the Web Player. You may require Port Forwarding capabilities
+                    on your network if you wish to connect from outside of the network of the client. Otherwise, you can use the local network address and port to listen on a different device.
+                </p>
             </div>
         </div>
     </div>

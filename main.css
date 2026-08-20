@@ -70,7 +70,17 @@ body {
     background-color: rgba(0, 255, 255, 0.2);
     cursor: pointer;
 }
+.applications .app .icon {
+    display: block;
+    margin: auto;
+    font-size: 72px;
+}
 
 .hidden {
     display: none;
+}
+
+p.main {
+    font-weight: lighter;
+    font-size: 20px;
 }
