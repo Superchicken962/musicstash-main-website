@@ -3,15 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0;https://github.com/Superchicken962/music-player-app" />
-    <style>
-        body {
-            background-color: rgb(30,30,30);
-        }
-    </style>
+    <title>MusicStash</title>
+    <link rel="stylesheet" href="./main.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/6.3.2/themes/light.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <!-- This page is temporary, and only serves to redirect to the musicstash github repository until a proper website is made.  -->
+    <div class="block text-center top">
+        <h1>MusicStash<span class="hintText">.app</span></h1>
+    </div>
+
+    <div class="block">
+        <p class="main">
+            MusicStash is a music player that is designed to be simple and easy to use. It allows for file importing, or direct download from YouTube.
+        </p>
+    </div>
+
+    <div class="block text-center">
+        <div class="applications">
+            <div class="app selected" data-for-app="client">
+                <h2>Client / Server</h2>
+                <i class="icon fa fa-computer"></i>
+            </div>
+
+            <div class="app" data-for-app="web_player">
+                <h2>Web Player</h2>
+                <i class="icon fa fa-mobile-phone"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="applicationDescription">
+            <div class="appDesc" data-app="client">
+                <p class="main">
+                    The Desktop Application (Client) is the original MusicStash application. With the client,
+                    you are given a <span class="hint" data-hint="The main Stash where all songs will be stored">Master Stash</span> where all your imported music will reside. You can create your own <span class="hint" data-hint="Playlists are called Stashes">Stashes</span>
+                    and add any song that you have imported into your Master Stash.
+                </p>
+
+                <p class="main">
+                    Importing music is simple. If you have your own mp3 files, you can do a local import which will copy the file into MusicStash.
+                    Otherwise, you can download songs directly from YouTube into your Master Stash.
+                </p>
+
+                <p>
+                    <a class="button big download external" href="download.html" target="_blank">Download</a>
+                </p>
+            </div>
+            <div class="appDesc hidden" data-app="web_player">
+                <p class="main">
+                    The Web Player is an external website that allows you to play your music on other devices. It has been designed as a <span class="hint" data-hint="Requires a server connection to access data">non-standalone</span> mobile version of the client.
+                    Provided with a server address, the web player will show all user-created Stashes
+                    (Not the Master Stash) and allow for a similiar experience to the desktop app.
+                </p>
+
+                <p class="main">
+                    The desktop application comes with a server manager, which will allow you to host your MusicStash and connect via the Web Player. You may require Port Forwarding capabilities
+                    on your network if you wish to connect from outside of the network of the client. Otherwise, you can use the local network address and port to listen on a different device.
+                </p>
+
+                <p>
+                    <a class="button big download external" href="https://player.musicstash.app" target="_blank">View Online</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="block bottom">
+        <p class="hintText">Mark Gurney | 2026</p>
+    </div>
 </body>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script src="./utils.js"></script>
+<script src="./main.js"></script>
 </html>
