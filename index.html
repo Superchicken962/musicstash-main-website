@@ -3,15 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0;https://github.com/Superchicken962/music-player-app" />
-    <style>
-        body {
-            background-color: rgb(30,30,30);
-        }
-    </style>
+    <title>MusicStash</title>
+    <link rel="stylesheet" href="./main.css"/>
 </head>
 <body>
-    <!-- This page is temporary, and only serves to redirect to the musicstash github repository until a proper website is made.  -->
+    <div class="block text-center">
+        <h1>MusicStash</h1>
+    </div>
+
+    <div class="block text-center">
+        <div class="applications">
+            <div class="app selected" data-for-app="client">
+                <h2>Client / Server</h2>
+            </div>
+
+            <div class="app" data-for-app="web_player">
+                <h2>Web Player</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="applicationDescription">
+            <div class="appDesc" data-app="client">
+                <p>Client Description</p>
+            </div>
+            <div class="appDesc hidden" data-app="web_player">
+                <p>Web Player Description</p>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="./utils.js"></script>
+<script src="./main.js"></script>
 </html>

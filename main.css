@@ -1,0 +1,76 @@
+:root {
+    --primary: rgb(35, 35, 35); 
+    --secondary: rgb(22, 22, 22);
+    --tertiary: rgb(39,39,39);
+    --sub_tertiary: rgb(50, 50, 50);
+    --subtle: rgb(65, 65, 65);
+    --text: white;
+    --text_hint: grey;
+    --active_song: rgb(0, 180, 0);
+    --selection: rgb(0, 220, 0);
+    --solid_button: rgb(40, 98, 255);
+    --solid_button_hover: rgb(20, 78, 230);
+
+    --application: rgba(33, 68, 163, 0.2);
+}
+:root.light {
+    --primary: rgb(225, 225, 225);
+    --secondary: rgb(190, 190, 190);
+    --tertiary: rgb(155, 155, 155);
+    --sub_tertiary: rgb(180, 180, 180);
+    --subtle: rgb(120, 120, 120);
+    --text: black;
+    --text_hint: rgb(56, 56, 56);
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+    margin: auto;
+    color: var(--text);
+    background-color: var(--primary);
+}
+
+.block {
+    display: block;
+    margin: auto;
+    width: 80%;
+    background-color: var(--secondary);
+    padding: 4px 16px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.text-center {
+    text-align: center;
+}
+
+.applications {
+    display: block;
+    margin: auto;
+    padding: 32px 0;
+}
+.applications .app {
+    display: inline-flex;
+    margin: auto;
+    background-color: var(--application);
+    padding: 16px 24px;
+    height: 300px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-right: 15px;
+}
+.applications .app:hover, .applications .app.selected {
+    box-shadow: 0 0 10px aqua;
+    background-color: rgba(0, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
